@@ -12,7 +12,7 @@
     <div class="container-fluid p-0">
         <?php
             require_once './include/nav.php'
-        ?>k
+        ?>
         <div class="container py-5">
             <?php
                 echo renderHeader($title, 1);
