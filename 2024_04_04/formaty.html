@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formatowanie</title>
+    <link rel="stylesheet" href="./styl2.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Formatowanie dokumentów HTML
+        </h1>
+    </header>
+    <section class="pierwszy">
+        <h2>
+            Przykład listy - hobby
+        </h2>
+        <ul>
+            <li>
+                muzyka
+            </li>
+            <li>
+                turystyka
+                <ol>
+                    <li>
+                        góry
+                    </li>
+                    <li>
+                        jeziora
+                    </li>
+                    <li>
+                        na rowerze
+                    </li>
+                </ol>
+            </li>
+            <li>
+                książki
+            </li>
+        </ul>
+    </section>
+    <section class="pierwszy">
+        <h2>Przykład tabeli - rozkład dnia</h2>
+        <table>
+            <tr>
+                <th>Pora dnia</th>
+                <th>obowiązki</th>
+            </tr>
+            <tr>
+                <td>rano</td>
+                <td>nauka</td>
+            </tr>
+            <tr>
+                <td>południe</td>
+                <td>zajęcia dodatkowe</td>
+            </tr>
+            <tr>
+                <td>popołudnie</td>
+                <td rowspan="2">moje hobby</td>
+            </tr>
+            <tr>
+                <td>wieczór</td>
+            </tr>
+        </table>
+    </section>
+    <section class="trzeci">
+        <img src="./napisy.jpg" alt="technologia web" height="300">
+    </section>
+    <main>
+        <p>Podaj rozmiar tekstu w procentach: <input type="number" id="rozmiar"/>%</p>
+        <p>
+            <select name="format" id="format">
+                <option value="inherit">prosty</option>
+                <option value="italic">kursywa</option>
+            </select>
+        </p>
+        <p>
+            Jakim kolorem sformatować tekst? Wybierz przycisk
+            <br>
+            <button id="red">&nbsp;</button>
+            <button id="green">&nbsp;</button>
+            <button id="blue">&nbsp;</button>
+        </p>
+        <p id="do_skryptu">
+            To jest przykład paragrafu, który może być dowolnie formatowany przez JavaScript
+        </p>
+    </main>
+    <footer>
+        <p>
+            Formatowaniem tekstu zajmował się: <i>00000000000</i>
+        </p>
+        <a href="http://formatowanie.pl" target="_blank">Odwiedź także</a>
+    </footer>
+    <script>
+        const changeStyle = (color) => {
+            const doSkryptu = document.querySelector('#do_skryptu')
+            const rozmiar = document.querySelector('#rozmiar')
+            const format = document.querySelector('#format')
+
+            doSkryptu.style.color = color;
+            doSkryptu.style.fontSize = `${rozmiar.value}%`;
+            doSkryptu.style.fontStyle = format.value;
+        }
+
+        const red = document.querySelector('#red')
+        const green = document.querySelector('#green')
+        const blue = document.querySelector('#blue')
+
+        red.addEventListener('click', () => changeStyle('red'))
+        green.addEventListener('click', () => changeStyle('green'))
+        blue.addEventListener('click', () => changeStyle('blue'))
+    </script>
+</body>
+</html>

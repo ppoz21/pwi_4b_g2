@@ -1,0 +1,67 @@
+* {
+    font-family: Georgia;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.pierwszy {
+    float: left;
+    background-color: #A26475;
+    color: white;
+    width: 30%;
+    height: 300px;
+}
+
+.trzeci {
+    background-color: #A26475;
+    color: white;
+    width: 40%;
+    height: 300px;
+    text-align: right;
+    float: left;
+}
+
+main {
+    clear: both;
+    background-color: #F0EAE2;
+    padding: 50px;
+}
+
+footer {
+    background-color: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+table, th, td {
+    border: 2px solid #69293A;
+    border-collapse: collapse;
+    padding: 7px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
